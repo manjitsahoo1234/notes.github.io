@@ -1,0 +1,105 @@
+{% load static %}
+{% include 'cdnlines.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Note Sharing</title>
+
+    <!-- google fonts cdn link  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<style media="screen">
+  body{
+    background-color: lightgreen;
+    background-image: url("static/images/noteshare.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(3px);
+  }
+</style>
+<body>
+<!-- header section starts  -->
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color:teal;">
+      <a href="{% url 'index' %}" class="btn btn-dark text-dark">Online Notes Sharing</a>
+
+        <ul class="navbar-nav">
+            <li class="navbar-item "><a class="nav-link text-white ml-5" class="active" href="{% url 'index' %}"><h3 class="font-weight-bold">Home</h3><span class="sr-only">(current)</span></a></li>
+            <li class="navbar-item "><a class="nav-link text-white" href="{% url 'about' %}"><h3 class="font-weight-bold">About</h3></a></li>
+            <li class="navbar-item "><a class="nav-link text-white" href="{% url 'contact' %}"><h3 class="font-weight-bold">Contact</h3></a></li>
+            <li class="navbar-item "><a class="nav-link text-white" href="{% url 'signup' %}"><h3 class="font-weight-bold">User Signup</h3></a></li>
+            <li class="navbar-item "><a class="nav-link text-white" href="{% url 'login' %}"><h3 class="font-weight-bold">User Login</h3></a></li>
+            <li class="navbar-item "><a class="nav-link text-white" href="{% url 'login_admin' %}"><h3 class="font-weight-bold">Admin Login</h3></a></li>
+          </ul>
+    </nav>
+<!-- header section ends -->
+<!-- home section starts  -->
+    <h1 style="background-color :orange" class="text-center font-weight-bold py-3 mt-1 display-4">Online Notes Sharing</h1><br><br>
+
+<div class="row">
+  <div class="col-md-4">
+    <img src="{%static 'images/home.jpg'%}" style="height:260px;width:400px" alt="">
+  </div>
+  <div class="col-md-4">
+    <img src="{%static 'images/home1.jpg'%}" style="height:260px;width:400px" alt="">
+  </div>
+  <div class="col-md-4">
+    <img src="{%static 'images/home2.jpg'%}" style="height:260px;width:400px" alt="">
+  </div>
+</div><br><br><br>
+<!-- home section ends -->
+<!-- footer section starts  -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="box-container">
+            <div class="box text-center bg-info pb-4">
+                <h1 class="bg-warning font-weight-bold">Online Source</h1>
+                <h2 class="font-weight-bold"><a class="nav-link text-dark" href="https://www.javatpoint.com/">Javatpoint</a></h2>
+                <h2 class="font-weight-bold"><a class="nav-link text-dark" href="https://www.tutorialspoint.com/tutorialslibrary.htm">Tutorial point</a><h2>
+                <h2 class="font-weight-bold"><a class="nav-link text-dark" href="https://www.geeksforgeeks.org/">GeeksForGeeks</a><h2>
+            </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="box-container">
+      <div class="box text-center bg-info pb-4">
+          <h1 class="bg-warning font-weight-bold ">Quick Links</h1>
+          <h2 class="font-weight-bold"><a class="nav-link text-dark" href="http://www.fmuniversity.nic.in/">F M University</a><h2>
+          <h2 class="font-weight-bold"><a class="nav-link text-dark" href="https://swayam.gov.in/">Swayam</a><h2>
+          <h2 class="font-weight-bold"><a class="nav-link text-dark" href="https://nptel.ac.in/">NPTEL</a><h2>
+     </div>
+     </div>
+    </div>
+    <div class="col-md-4">
+      <div class="box-container font-weight-bold">
+      <div class="box text-center bg-info pb-1">
+          <h1 class="bg-warning font-weight-bold">Contact Info</h1>
+          <h3 class="font-weight-bold"><p class="text-dark"> <i class="fas fa-map-marker-alt text-dark"></i>F M University PG Dept. of Computer Science</p><h3>
+          <h2 class="font-weight-bold"><p class="text-dark"> <i class="fas fa-envelope text-dark"></i>hodictfmu@gmail.com</p><h2>
+          <h2 class="font-weight-bold"><p class="text-dark"> <i class="fas fa-phone text-dark"></i>8917373059</p><h2><br>
+      </div>
+    </div>
+    </div>
+  </div>
+    </div>
+</div>
+<!-- footer section ends -->
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
